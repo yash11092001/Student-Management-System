@@ -1,0 +1,54 @@
+{% extends "master.html" %}
+    
+
+{% block body %}
+<br><br>
+<center><h1>Student Details</h1></center>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Registration No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile No</th>
+        <th scope="col">Email</th>
+        <th scope="col">City</th>
+        <th scope="col">College Name</th>
+        <th scope="col">Degree No</th>
+        <th scope="col">Passing Year</th>
+        <th scope="col">Percentage</th>        
+        
+        <th scope="col">Course</th>
+        <th scope="col">Fee</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        
+        {% for student in students %}           
+      <tr>
+        <th scope="row">{{student.reg_no}}</th>
+        <td><a href="/account/details/{{student.reg_no}}/">{{student.name}}</a></td>
+        <td>{{student.mobile}}</td>
+        <td>{{student.email}}</td>
+        <th scope="row">{{student.city}}</th>
+        <td>{{student.clg_name}}</td>
+        <td>{{student.degree}}</td>
+        <td>{{student.passing_year}}</td>
+        <th scope="row">{{student.percentage}}</th>
+        <td>{{student.course}}</td>
+        <td>{{student.fee_amount}}</td>
+        <td><a href="/account/delete/{{student.reg_no}}/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a></td>
+        
+        <td><a href="/account/details/{{student.reg_no}}/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Update</a></td>
+       
+      </tr>
+      {% endfor %}
+    
+    </tbody>
+  </table>
+
+
+{% endblock body %}
+    

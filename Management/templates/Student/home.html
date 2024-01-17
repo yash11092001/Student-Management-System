@@ -1,0 +1,104 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+home
+{% endblock title %}
+
+{% block body %}
+<marquee behavior="" direction="">
+    <H1 style="text-align: center; margin-top: 20px;"><span id="s1">T</span>he<span id="s1">K</span>iran<span
+            id="s1">A</span>cademy</H1>
+</marquee>
+
+<div
+    style="height: 400px;width: 100%;background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg);background-repeat: no-repeat;background-size: cover;">
+
+    <div style="height: 400px;width: 50%; float: left;">
+        <H1 style="text-align: center; margin-top: 20px;"><span id="d1">T</span>he<span id="d1">K</span>iran<span
+                id="d1">A</span>cademy</H1>
+        <h3 style="text-align: center; margin-top: 20px;">Top rated IT Training Classes in Pune</h3>
+        <h4 style="text-align: center; margin-top: 20px;">Java, Selenium, Python, AWS, Azure, Salesforce Courses with
+            100%
+            Job Placement Support</h4>
+        <h6 style="text-align: center; margin-top: 20px;">Looking to become a Software Engineer, Programmer, Tester, IT
+            Consultant in Leading Software MNC's ?</h6><br><br><b></b>
+        <center><button type="button" class="btn btn-success"><a
+                    href="{% url 'registration' %}">Registration</a></button>
+        </center>
+    </div>
+
+
+    <div style="height: 400px;width: 50%;float: left;">
+
+        <div style="height: 400px;width: 50%;float: left;background-color: black;">
+            <img src="{%static 'images/jbk1.png'%}" alt="" height="200px" width="100%">
+
+            <img src="{%static 'images/jbk2.png'%}" alt="" height="200px" width="100%">
+
+        </div>
+
+        <div style="height: 400px;width: 50%;float: left;background-color: blue;">
+            <img src="{%static 'images/jbk3.png'%}" alt="" height="200px" width="100%">
+            <img src="{%static 'images/jbk4.png'%}" alt="" height="200px" width="100%">
+        </div>
+
+    </div>
+
+</div>
+<br>
+<center>
+
+    <h1>Most Popular IT Training Courses in Pune</h1>
+    <h4>Software Industry Offers High-Paying Jobs for the most demanding IT Courses - Java, Selenium, Python, AWS,
+        Azure, Salesforce</h4>
+</center>
+
+<!-- Cards start -->
+<div class="card-group">
+    <div class="card">
+        <img class="card-img-top" src="{%static 'images/python1.jpeg'%}" alt="Card image cap" height="200px">
+        <div class="card-body">
+            <h5 class="card-title">Python Programming Language</h5>
+            <p class="card-text">
+                Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+            </p>
+            <a class="btn btn-outline-primary" href="{% url 'python' %}" role="button">Lern More</a>
+            <a class="btn btn-outline-success" href="{% url 'registration' %}" role="button">Enroll Now</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="{%static 'images/java1.jpeg'%}" alt="Card image cap" height="200px">
+        <div class="card-body">
+            <h5 class="card-title">Java Programming Language</h5>
+            <p class="card-text">
+                Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today’s digital world, by providing the reliable platform upon which many services and applications are built. New, innovative products and digital services designed for the future continue to rely on Java, as well.
+
+While most modern Java applications combine the Java runtime and application together, there are still many applications and even some websites that will not function unless you have a desktop Java installed. Java.com, this website, is intended for consumers who may still require Java for their desktop applications – specifically applications targeting Java 8. 
+            </p>
+            <a class="btn btn-outline-primary" href="{% url 'java' %}" role="button">Lern More</a>
+            <a class="btn btn-outline-success" href="{% url 'registration' %}" role="button">Enroll Now</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="{%static 'images/aws1.png'%}" alt="Card image cap" height="200px">
+        <div class="card-body" >
+            <h5 class="card-title">Cloud computing with AWS</h5>
+            <p class="card-text">
+                AWS has significantly more services, and more features within those services, than any other cloud provider–from infrastructure technologies like compute, storage, and databases–to emerging technologies, such as machine learning and artificial intelligence, data lakes and analytics, and Internet of Things. This makes it faster, easier, and more cost effective to move your existing applications to the cloud and build nearly anything you can imagine.
+
+                AWS also has the deepest functionality within those services. For example, AWS offers the widest variety of databases that are purpose-built for different types of applications so you can choose the right tool for the job to get the best cost and performance.
+            </p>
+            <a class="btn btn-outline-primary" href="{% url 'aws' %}" role="button">Lern More</a>
+            <a class="btn btn-outline-success" href="{% url 'registration' %}" role="button">Enroll Now</a>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Cards end -->
+
+
+
+
+{% endblock body %}

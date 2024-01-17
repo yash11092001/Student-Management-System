@@ -1,0 +1,65 @@
+{% extends "master.html" %}
+
+
+{% block body %}
+<div style="height: 1000px;width: 400px; background-color: aqua;margin-left: 500px;margin-top: 100px;">
+    <div style="height: 100px;width: 400px;">
+        <center><h1>Student Details</h1></center>
+        <hr>
+
+    </div>
+
+    <div style="height: 900px;width: 400px;">
+        <center>
+        <form action="" method="post">
+            {% csrf_token %}
+           
+            <label for="r"><h4>Reg.No</h4></label><br>
+            <input type="text" name="reg" id="r" style="width: 300px;" value="{{student.reg_no}}">
+            <br>
+            <label for="n" ><h4>Name</h4></label><br>
+            <input type="text" name="name" id="n" style="width: 300px;" value="{{student.name}}">
+            <br>
+            <label for="c"><h4>City</h4></label><br>
+            <input type="text" name="city" id="c" style="width: 300px;" value="{{student.city}}">
+            <br>
+            <label for="cl"><h4>College Name</h4></label><br>
+            <input type="text" name="clg" id="cl" style="width: 300px;" value="{{student.clg_name}}">
+            <br>
+            <label for="d"><h4>Degree</h4></label><br>
+            <input type="text" name="degree" id="d" style="width: 300px;" value="{{student.degree}}">
+            <br>
+            <label for="y"><h4>Passing Year</h4></label><br>
+            <input type="number" name="year" id="y" style="width: 300px;" value="{{student.passing_year}}">
+            <br>
+            <label for="p"><h4>Percentage</h4></label><br>
+            <input type="text" name="percentage" id="p" style="width: 300px;" value="{{student.percentage}}">
+            <br>
+            <label for="e"><h4>Email</h4></label><br>
+            <input type="email" name="email" id="e" style="width: 300px;" value="{{student.email}}">
+            <br>
+            <label for="m"><h4>Mobile No</h4></label><br>
+            <input type="text" name="mbl" id="m" style="width: 300px;" value="{{student.mobile}}">
+            <br>
+            <label for="c"><h4>Course</h4></label><br>
+            <select name="course" id="c" value="{{student.course}}">
+                <option value="python">python</option>
+                <option value="java">Java</option>
+                <option value="aws">Aws</option>
+            </select><br>
+            <label for="a"><h4>Amount</h4></label><br>
+            <input type="text" name="amount" id="a" style="width: 300px;" value="{{student.fee_amount}}"><br> <br>
+            <button type="submit" class="btn btn-success">Update</button> 
+            <a href="/account/delete/{{student.reg_no}}/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Delete</a>
+
+
+
+
+        </form>
+    </center>
+
+    </div>
+
+</div>
+
+{% endblock body %}
